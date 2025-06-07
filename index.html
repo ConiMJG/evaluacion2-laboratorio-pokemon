@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Pokémon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>🔬 Laboratorio Pokémon Virtual</h1>
+    </header>    
+
+    <main id="main-content">
+        <section id="bienvenida">
+            <div class="profesor-container">
+                <img src="img/profesor.png" alt="Profesor Oak" class="profesor-img">
+                
+                <div class="burbuja-dialogo">
+                    <p><strong>¡Hola Entrenador!</strong><br>Yo soy el Profesor Oak.<br>¡Es hora de elegir tu primer Pokémon y comenzar tu aventura!</p>
+                </div>
+            </div>
+
+            <button id="iniciar-btn">Comenzar</button>
+        </section>
+
+        <section id="nombre-entrenador" style="display: none;">
+            <button class="btn-volver" data-volver="bienvenida">⬅️ Volver</button>
+            <div class="entrenador-container">
+                <img src="img/entrenador.png" alt="Entrenador Pokemón" class="entrenador-img">
+                
+                <div class="burbuja-entrenador">
+                    <p id="mensaje-entrenador">
+                        <strong>¡Vamos, valiente entrenador!</strong><br>
+                        Escribe tu nombre para comenzar tu viaje Pokémon.
+                    </p>
+                    <div class="burbuja-flecha"></div>
+                </div>
+                <div class="formulario-nombre">
+                    <h2><i class="fas fa-user">Ingresa tu nombre de entrenador</i></h2>
+                    <input type="text" id="inputNombre" placeholder="Nombre del Entrenador" required>
+                    <br><br>
+                    <button id="continuar-btn">Continuar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="selector-region" style="display: none;">
+            <button class="btn-volver" data-volver="nombre-entrenador">⬅️ Volver</button>
+            <h2><i class="fas fa-map-marked-alt"></i>Selecciona tu Región</h2>
+            <div class="regiones-container">
+                <div class="region-card" data-region="kanto">
+                    <img src="img/regiones/kanto.png" alt="Región Kanto">
+                    <h3>Kanto</h3>
+                </div>
+                <div class="region-card" data-region="johto">
+                    <img src="img/regiones/johto.png" alt="Región johto">
+                    <h3>Johto</h3>
+                </div>
+                <div class="region-card" data-region="hoenn">
+                    <img src="img/regiones/hoenn.png" alt="Región Hoenn">
+                    <h3>Hoenn</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="seleccion-pokemon" style="display: none;">
+            <button class="btn-volver" data-volver="selector-region">⬅️ Volver</button>
+            <h2><i class="fas fa-dragon"></i>Elige tu Pokémon Inicial</h2>
+            <div class="pokemon-container"></div>
+        </section>
+
+        <div id="mensaje-eleccion" style="display: none;" class="mensaje-eleccion">
+        <p><i class="fas fa-star"></i>¡<span id="nombre-entrenador-mostrar"></span> ha elegido a <span id="pokemon-elegido"></span> como su compañero inicial!</p>
+        </div>
+
+        <section id="registro-elecciones" style="display: none;">
+            <h3>📋 Registro de Entrenadores</h3>
+            <ul id="lista-elecciones"></ul>
+            <button id="reiniciar-btn">🔄 Reiniciar elecciones</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Laboratorio Pokémon. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
